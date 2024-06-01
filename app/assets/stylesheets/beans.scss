@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+h1 {
+  color: #71736A;
+  margin-left: 20px;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900
+
+.noto-serif-jp-unique123 {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* ここに適切な値を入力してください */
+  font-style: normal;
+}
+
 .bean_form{
     display: flex;
     flex-direction: column;

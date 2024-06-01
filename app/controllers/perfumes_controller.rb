@@ -32,6 +32,36 @@ end
 
 def show6
 end
+
+def show7
+end
+
+def show8
+end
+
+def show9
+end
+
+def show10
+end
+
+def show11
+end
+
+def show12
+end
+
+def show13
+end
+
+def show14
+end
+
+def show15
+end
+
+def show16
+end
 #省略
 
 

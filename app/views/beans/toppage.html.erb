@@ -1,9 +1,18 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
-<h1>自分好みのコーヒーをみつけよう！</h1>
 
-<h2>コーヒー診断</h2>
-<a href="perfumes/question1" class="btn03 pushdown"><span>コーヒー診断START</span></a>
-#<%= link_to "コーヒー診断をはじめる", perfumes_question1_path, class: "link" %>
+<div class="toppage">
+    <%= image_tag 'cup1.jpg', :size=> "100x100", class: 'cup' %>
 
-<h2>おすすめのコーヒー</h2>
-<%= link_to "商品一覧へ", beans_path %>
+    <h1>自分好みのコーヒーをみつけよう！</h1>
+
+    <h2>コーヒー診断</h2>
+    <a href="perfumes/question1" class="btn03 pushdown"><span>コーヒー診断START</span></a>
+    #<%= link_to "コーヒー診断をはじめる", perfumes_question1_path, class: "link" %>
+
+    <h2>おすすめのコーヒー</h2>
+    <%= link_to "商品一覧へ", beans_path %>
+
+</div>

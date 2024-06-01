@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Coffee</title>
+    <title>Coffee Journey</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,29 +12,35 @@
   </head>
 
   <body>
- <header>
-  <h1><%= link_to "My Favorite COFFEE", beans_toppage_path %><h1>
-  <div class="header-list">
-   <ul>
-    <% if user_signed_in? %>
-  
-     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-     <li><%= link_to "マイページ", user_path(current_user.id) %><li>
+    <header>
+      <div class="navtext-container">
+        <div class="navtext"><%= link_to "Coffee Journey", beans_toppage_path %></div>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        </div>
+          <input type="checkbox" class="menu-btn" id="menu-btn">
+          <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+          <ul class="menu">
+            <li><%= link_to "商品紹介", beans_path %></li>
+            <li><%= link_to "おすすめコーヒー診断",perfumes_question1_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "マイページ", user_path(current_user.id) %><li>
+            <% else %>
+              <li><%= link_to "新規登録", new_user_registration_path %></li>
+              <li><%= link_to "ログイン", new_user_session_path %></li>
+            <% end %>
+          </ul>
+    </header>
 
-    <% else %>
-     <li><%= link_to "新規登録", new_user_registration_path %></li>
-     <li><%= link_to "ログイン", new_user_session_path %></li>
-    <% end %>
-   </ul>
-  </div>
- </header>
- <main>
-  <%= yield %>
- </main>
+    <main>
+      <%= yield %>
+    </main>
 
-  <footer>
-    <p>Copyright © Risako All Rights Reserved.</p>
-  </footer>
+    <footer>
+      <p>Copyright © Risako All Rights Reserved.</p>
+    </footer>
  </body>
 
 </html>

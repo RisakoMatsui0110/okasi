@@ -1,0 +1,22 @@
+databases:
+  - name: okasi_DB
+    databaseName: okasi_db
+    user: okasi
+    region: singapore
+
+services:
+  - type: web
+    name: okasi
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: okasi_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+

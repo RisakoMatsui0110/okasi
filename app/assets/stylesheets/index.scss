@@ -55,16 +55,16 @@ border-color:transparent;
 
 /*ボタンの中のテキスト*/
 .btn03 span {
-position: relative;
-z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-  /*テキストの形状*/
-display: block;
-  padding: 10px 30px;
-background:#fff;
-border-radius: 25px;
-color:#333;
-  /*アニメーションの指定*/
-  transition: all 0.3s ease;
+
+  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+  display: block;
+    padding: 10px 30px;
+  background:#fff;
+  border-radius: 25px;
+  color:#333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
 }
 
 /*== 下に押し込まれる（立体が平面に） */
@@ -74,7 +74,7 @@ color:#333;
   content:"";
   /*絶対配置で影の位置を決める*/
   position: absolute;
-z-index: -1;
+  z-index: -1;
   top:4px;
   left:0;
   /*影の形状*/
