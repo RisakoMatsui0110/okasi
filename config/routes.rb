@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:show, :edit, :update]do
-
-end
+  end
   post 'beans/new' => 'beans#create'
 
   get 'beans/toppage' => 'beans#toppage'

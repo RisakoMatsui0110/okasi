@@ -1,8 +1,5 @@
 class PerfumesController < ApplicationController
     
-
-    
-#省略
 def question1
 end
 
@@ -62,7 +59,6 @@ end
 
 def show16
 end
-#省略
 
 
 
