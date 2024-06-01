@@ -19,6 +19,8 @@
     margin: 0;
   }
   body {
+    background-image: url(茶色の背景.jpg);
+    background-size: 100%;
     min-height: 100vh;
     position: relative; 
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
@@ -26,6 +28,8 @@
     display: flex;
     flex-direction: column;
     background-color: #A68C6D
+    
+
   }
   header {
     background-color: #592C28;
