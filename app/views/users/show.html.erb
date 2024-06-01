@@ -1,0 +1,57 @@
+
+
+
+<h2>Personal info</h2>
+<% if current_user.id == @user.id %>
+<%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+
+<h2>memory</h2>
+<%= link_to "新規投稿へ", new_home_path %>
+
+
+<h2>COFFEE Memory</h2>
+
+
+<p><% @user.homes.each do |t| %>
+    <p>名前：<%= t.name %></p>
+    <p>産地：<%= t.area %></p>
+    <p>値段：<%= t.price %></p>
+    <p>挽き方：<%= t.grind %></p>
+    <p>味：<%= t.taste %></p>
+    <p>感想：<%= t.repeat %></p>
+      <div>
+        <p>総合評価：
+        <span class="star-rating">
+          <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </span> 
+        </p>
+      </div>
+
+      <div>
+        <p>リピあり？：
+        <span class="star-rating">
+          <span class="star-rating-front" style="width: <%= getPercent(t.level) %>%;">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </span>
+        </p>
+      </div>
+
+      <%= stylesheet_link_tag 'index', :media => "all" %>
+      <div class="main-box">
+        <div class="left-container"></div>
+        <div class=right-container>
+          <%= link_to "詳細", home_path(t.id) %>
+          <%= link_to "編集", edit_home_path(t.id) %>
+          <%= link_to "削除", home_path(t.id), method: :delete %>
+        </div>
+      </div>
+      
+    
+
+<% end %></p>
+
+<%= link_to "商品紹介一覧に戻る", beans_path %>
+<%= link_to "homeのindexに戻る", homes_path %>
+

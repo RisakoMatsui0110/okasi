@@ -1,0 +1,19 @@
+<h1>コーヒー紹介</h1>
+<h3>商品詳細</h3>
+<div class="bean">
+  <p><%= @bean.name %></p>
+  <p><%= @bean.area %></p>
+  <p><%= @bean.url %></p>
+  <p><%= @bean.taste %></p>
+  <p><%= @bean.price %></p>
+  <p><%= @bean.grind %></p>
+
+  <p><%= @bean.created_at %></p>
+</div>
+<%= link_to "編集する", edit_bean_path(@bean.id) %>
+<%= link_to "一覧に戻る", beans_path %>
+ #画像を表示
+ <div class="image-top">
+ <%= image_tag @post.resize_image_top if @post.image_top.attached? %>
+</div>
+

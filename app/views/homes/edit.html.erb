@@ -1,0 +1,22 @@
+<%= form_for @home do |f| %>
+    <%= f.label :名前 %>
+    <%= f.text_field :name, :size => 140 %>
+
+    <%= f.label :産地 %>
+    <%= f.text_field :area, :size => 140 %>
+
+    <%= f.label :価格 %>
+    <%= f.text_field :price, :size => 140 %>
+
+    <%= f.label :挽き方 %>
+    <%= f.text_field :grind, :size => 140 %>
+
+    <%= f.label :味の感想 %>
+    <%= f.text_field :taste, :size => 140 %>
+
+    <%= f.label :自己評価 %>
+    <%= f.text_field :repeat, :size => 140 %>
+    
+    
+    <%= f.submit "編集する" %>
+  <% end %>

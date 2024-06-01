@@ -1,0 +1,55 @@
+<h1>おすすめのコーヒー紹介</h1>
+
+<% if user_signed_in? %>
+   <% if current_user.admin? %>
+   <%= link_to "新規投稿(りちゃ用)へ", new_bean_path %>
+   <% end %>
+ <% end %>
+
+<%= link_to "トップページへ", beans_toppage_path %>
+<div class="beans-container">
+  <% @beans.each do |t| %>
+    <div class="bean">
+    <%= image_tag t.resize_image_top if t.image_top.attached? %>
+    <%= t.user.email %>
+      <%= t.name %>
+      <%= t.area %>
+      <%= t.url %>
+      <%= t.taste %>
+      <%= t.price %>
+      <%= t.grind %>
+      <div>
+        <h2>総合評価：
+        <span class="star-rating">
+          <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </span> 
+        </h2>
+      </div>
+
+        <!--- 総合評価の星の部分終わり------->
+
+
+        <!--- 授業レベルの星の部分 ------------>
+      <div>
+        <h2>授業レベル：
+        <span class="star-rating">
+          <span class="star-rating-front" style="width: <%= getPercent(t.level) %>%;">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </span>
+        </h2>
+      </div>
+        <!--- 授業レベルの星の部分終わり-------->
+
+      <%= link_to "詳細へ", bean_path(t.id) %>
+      <%= link_to "編集する", edit_bean_path(t.id) %>
+      <%= button_to "削除する", bean_path(t.id), method: :delete %>
+    </div>
+
+    
+
+
+
+
+  <% end %>
+</div>
