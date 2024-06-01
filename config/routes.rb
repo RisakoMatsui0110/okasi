@@ -1,18 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show, :edit, :update]do
-  end
-  post 'beans/new' => 'beans#create'
 
   get 'beans/toppage' => 'beans#toppage'
-  resources :homes
-  resources :beans
-
-
-
-  root 'beans#toppage'
-
   get 'perfumes/question1' => 'perfumes#question1'
   get 'perfumes/question2' => 'perfumes#question2'
   get 'perfumes/question3' => 'perfumes#question3'
@@ -33,4 +22,12 @@ Rails.application.routes.draw do
   get 'perfumes/show14' => 'perfumes#show14'
   get 'perfumes/show15' => 'perfumes#show15'
   get 'perfumes/show16' => 'perfumes#show16'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, only: [:show, :edit, :update] do
+  end
+
+  resources :homes
+  resources :beans
+
+  root 'beans#toppage'
 end

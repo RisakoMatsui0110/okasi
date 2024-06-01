@@ -2,16 +2,16 @@ class BeansController < ApplicationController
 
     before_action :authenticate_user!, only: [:new, :create]
     
-    def index
-        @beans = Bean.all
+    def toppage
     end
 
-    def toppage
+    def index
+        @beans = Bean.all
     end
   
     def new
         @bean = Bean.new
-      end
+    end
     
       def create
         bean = Bean.new(bean_params)
