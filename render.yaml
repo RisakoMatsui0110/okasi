@@ -1,7 +1,7 @@
 databases:
   - name: okasi_DB
     databaseName: okasi_db
-    user: okasi
+    user: okasi_db_user
     region: singapore
 
 services:
