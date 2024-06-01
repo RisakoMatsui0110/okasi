@@ -54,20 +54,6 @@ ActiveRecord::Schema.define(version: 2024_05_18_073222) do
     t.integer "user_id"
   end
 
-  create_table "homes", force: :cascade do |t|
-    t.string "area"
-    t.string "taste"
-    t.string "price"
-    t.string "grind"
-    t.string "repeat"
-    t.integer "overall"
-    t.integer "level"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.integer "user_id"
-  end
-
   create_table "perfumes", force: :cascade do |t|
     t.string "question1"
     t.string "question2"
