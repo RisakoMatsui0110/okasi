@@ -1,12 +1,12 @@
 databases:
   - name: okasi_DB
     databaseName: okasi_db_d830
-    user: okasi_db_d830_user
+    user: okasi
     region: singapore
 
 services:
   - type: web
-    name: okasi_db_d830_user
+    name: okasi
     env: ruby
     region: singapore
     plan: free
