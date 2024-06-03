@@ -1,13 +1,41 @@
 
 <div class="toppage">
-    <%= image_tag 'cup1.jpg', :size=> "100x100", class: 'cup' %>
+    <%= image_tag 'cup1.jpg', :size=> "500x500", class: 'cup' %>
 
-    <h1>自分好みのコーヒーをみつけよう！</h1>
+    <div class="slide-container">
+        <div class="slide-wrapper">
+            <img class="slide" src="beanspackage.jpg" alt="京都">
+            <img class="slide" src="dripcoffee.jpg" alt="横浜">
+            <img class="slide" src="organiccafe.jpg" alt="良い街">
+            <img class="slide" src="holder.jpg" alt="良い街">
+            <img class="slide" src="light.jpg" alt="良い街">
+        </div>
+        <div class="slide-wrapper">
+            <img class="slide" src="beanspackage.jpg" alt="京都">
+            <img class="slide" src="dripcoffee.jpg" alt="横浜">
+            <img class="slide" src="organiccafe.jpg" alt="良い街">
+            <img class="slide" src="holder.jpg" alt="良い街">
+            <img class="slide" src="light.jpg" alt="良い街">
+        </div>
+        <div class="slide-wrapper">
+            <img class="slide" src="beanspackage.jpg" alt="京都">
+            <img class="slide" src="dripcoffee.jpg" alt="横浜">
+            <img class="slide" src="organiccafe.jpg" alt="良い街">
+            <img class="slide" src="holder.jpg" alt="良い街">
+            <img class="slide" src="light.jpg" alt="良い街">
+        </div>
+    </div>
 
-    <h2>コーヒー診断</h2>
-    <%= link_to "コーヒー診断START", perfumes_question1_path, class: "link" %>
 
-    <h2>おすすめのコーヒー</h2>
-    <%= link_to "商品一覧へ", beans_path %>
+    <div class="coffee-container">
+        <h2>コーヒー診断</h2>
+        <p>すきなフレーバーをみつけて休憩時間を有意義にすごそう</p>
+        <a href="#" class="btn03 pushdown"><span>7-1-15 下に押し込まれる（立体が平面に）</span></a>
+        <%= link_to "コーヒー診断START", perfumes_question1_path, class: "link" %>
+    </div>
 
+    <div class="coffee-container">
+        <h2>おすすめのコーヒー</h2>
+        <%= link_to "商品紹介へ", beans_path, class: "link" %>
+    </div>
 </div>

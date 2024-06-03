@@ -19,9 +19,8 @@
     margin: 0;
   }
   body {
-    background-image: url(茶色の背景.jpg);
+    background-image: url(brownback.jpg);
     background-size: 100%;
-    min-height: 100vh;
     position: relative; 
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
@@ -31,6 +30,27 @@
     
     
 
+  }
+
+  .slide-container {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .slide-wrapper {
+    display: flex;
+    animation: slide-flow 20s infinite linear 1s both;
+  }
+  .slide{
+    width: 300px;
+    object-fit:cover;
+    border: 1px solid #ddd;
+  }
+  @keyframes slide-flow {
+      0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
   }
   header {
     background-color: #592C28;
@@ -60,6 +80,7 @@
   .menu {
     list-style: none;
     position: absolute;
+    left: 0;
     width: 30%;
     height: auto;
     top: 0;
@@ -114,7 +135,8 @@
   
   .menu-icon {
     display: inline-block;
-    position: relative;
+    position: absolute;
+    left: 0;
     cursor: pointer;
     padding: 24px 14px;
     -webkit-tap-highlight-color: #71736A;
