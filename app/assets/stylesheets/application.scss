@@ -22,36 +22,17 @@
     background-image: url(brownback.jpg);
     background-size: 100%;
     position: relative; 
-    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
-    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto; 
+    font-weight: 400;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     background-color: #A68C6D;
     
-    
-
   }
 
-  .slide-container {
-    width: 100%;
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-  .slide-wrapper {
-    display: flex;
-    animation: slide-flow 20s infinite linear 1s both;
-  }
-  .slide{
-    width: 300px;
-    object-fit:cover;
-    border: 1px solid #ddd;
-  }
-  @keyframes slide-flow {
-      0% {transform: translateX(0);}
-  100% {transform: translateX(-100%);}
-  }
+  
   header {
     background-color: #592C28;
     height: 80px;
@@ -73,7 +54,8 @@
 
 
   :root {
-    --background-navbar: #F2F2F2;
+    --background-navbar: #f2f2f2c5;
+    background: liner-gradient(#f2f2f2c5, #f2f2f200);
   }
 
 
@@ -81,14 +63,14 @@
     list-style: none;
     position: absolute;
     left: 0;
-    width: 30%;
-    height: auto;
+    width: auto;
+    height: 100vh;
     top: 0;
     margin-top: 52px;
     padding: 0 0 10px 0;
     clear: both;
     background: var(--background-navbar);
-    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transition: 0.7s cubic-bezier(0.5, 0.2, 0.2, 0.96) 0.1008s;
     transform: scale(1, 0);
     transform-origin: top;
     flex-direction: column;
@@ -100,7 +82,7 @@
   .menu-btn:checked ~ .menu {
     transform: scale(1, 1);
     transform-origin: top;
-    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transition: 0.7s cubic-bezier(0.5, 0.2, 0.2, 0.96) 0.1008s;
   }
   
   /* Hamburger menbu text */
@@ -112,7 +94,7 @@
     text-transform: capitalize;
     color: #71736A;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
   }
   
   .menu li {
@@ -120,7 +102,7 @@
     padding: 15px 0;
     margin: 0 54px;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.7s;
   }
   
   .menu-btn:checked ~ .menu a,
@@ -143,7 +125,7 @@
   }
   
   .navicon {
-    background: #ddd;
+    background: #71736A;
     display: block;
     height: 3px;
     width: 26px;
@@ -158,7 +140,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    background: #ddd;
+    background: #71736A;
     transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   }
   
@@ -195,7 +177,7 @@
   /* Navbar Container */
   .navtext-container {
     width: 100%;
-    height: 52px;
+    height: 60px;
     position: absolute;
     box-sizing: border-box;
     display: flex;
@@ -209,8 +191,8 @@
     position: absolute;
     color: #71736A;
     letter-spacing: 4px;
-    font-size: 40px;
-    letter-spacing: -0.02em;;
+    font-size: 50px;
+    letter-spacing: -0.01em;;
   }
 
   header a {

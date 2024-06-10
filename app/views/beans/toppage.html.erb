@@ -1,41 +1,53 @@
 
-<div class="toppage">
-    <%= image_tag 'cup1.jpg', :size=> "500x500", class: 'cup' %>
+    <div class="toppage">
+        <%= image_tag 'toppage1.jpg', class: 'cup' %>
+    
+        <div class="topword">
 
-    <div class="slide-container">
-        <div class="slide-wrapper">
-            <img class="slide" src="beanspackage.jpg" alt="京都">
-            <img class="slide" src="dripcoffee.jpg" alt="横浜">
-            <img class="slide" src="organiccafe.jpg" alt="良い街">
-            <img class="slide" src="holder.jpg" alt="良い街">
-            <img class="slide" src="light.jpg" alt="良い街">
+            <div class="title">
+                CoffeeJourney
+            </div>
+            
+            好みのコーヒーで素敵なひとときを
+        
         </div>
-        <div class="slide-wrapper">
-            <img class="slide" src="beanspackage.jpg" alt="京都">
-            <img class="slide" src="dripcoffee.jpg" alt="横浜">
-            <img class="slide" src="organiccafe.jpg" alt="良い街">
-            <img class="slide" src="holder.jpg" alt="良い街">
-            <img class="slide" src="light.jpg" alt="良い街">
+        
+        <div class="slide-container">
+            <div class="slide-wrapper">
+                <img class="slide" src="/assets/beanspackage.jpg" alt="beanspackage.jpg">
+                <img class="slide" src="/assets/dripcoffee.jpg" alt="dripcoffee.jpg">
+                <img class="slide" src="/assets/organiccafe.jpg" alt="organiccafe.jpg">
+                <img class="slide" src="/assets/holder.jpg" alt="holder.jpg">
+                <img class="slide" src="/assets/light.jpg" alt="light.jpg">
+            </div>
+            <div class="slide-wrapper">
+                <img class="slide" src="/assets/beanspackage.jpg" alt="beanspackage.jpg">
+                <img class="slide" src="/assets/dripcoffee.jpg" alt="dripcoffee.jpg">
+                <img class="slide" src="/assets/organiccafe.jpg" alt="organiccafe.jpg">
+                <img class="slide" src="/assets/holder.jpg" alt="holder.jpg">
+                <img class="slide" src="/assets/light.jpg" alt="light.jpg">
+            
+            </div>
+            <div class="slide-wrapper">
+                <img class="slide" src="/assets/beanspackage.jpg" alt="beanspackage.jpg">
+                <img class="slide" src="/assets/dripcoffee.jpg" alt="dripcoffee.jpg">
+                <img class="slide" src="/assets/organiccafe.jpg" alt="organiccafe.jpg">
+                <img class="slide" src="/assets/holder.jpg" alt="holder.jpg">
+                <img class="slide" src="/assets/light.jpg" alt="light.jpg">
+            </div>
         </div>
-        <div class="slide-wrapper">
-            <img class="slide" src="beanspackage.jpg" alt="京都">
-            <img class="slide" src="dripcoffee.jpg" alt="横浜">
-            <img class="slide" src="organiccafe.jpg" alt="良い街">
-            <img class="slide" src="holder.jpg" alt="良い街">
-            <img class="slide" src="light.jpg" alt="良い街">
+
+
+        <div class="coffee-container">
+            <h2>コーヒー診断</h2>
+            <p>すきなフレーバーをみつけて休憩時間を有意義にすごそう</p>
+            <a href="/perfumes/questiontop" class="btn03 pushdown"><span>コーヒー診断START</span></a>
+        </div>
+
+        <div class="coffee-container">
+            <h2>おすすめのコーヒー</h2>
+            <a href="/beans" class="btn03 pushdown"><span>商品紹介へ</span></a>
+            <%= link_to "商品紹介へ", beans_path, class: "link" %>
         </div>
     </div>
 
-
-    <div class="coffee-container">
-        <h2>コーヒー診断</h2>
-        <p>すきなフレーバーをみつけて休憩時間を有意義にすごそう</p>
-        <a href="#" class="btn03 pushdown"><span>7-1-15 下に押し込まれる（立体が平面に）</span></a>
-        <%= link_to "コーヒー診断START", perfumes_question1_path, class: "link" %>
-    </div>
-
-    <div class="coffee-container">
-        <h2>おすすめのコーヒー</h2>
-        <%= link_to "商品紹介へ", beans_path, class: "link" %>
-    </div>
-</div>

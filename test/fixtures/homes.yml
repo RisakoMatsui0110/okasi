@@ -1,15 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyString
   area: MyString
-  taste: MyString
   price: MyString
   grind: MyString
+  taste: MyString
   repeat: MyString
 
 two:
+  name: MyString
   area: MyString
-  taste: MyString
   price: MyString
   grind: MyString
+  taste: MyString
   repeat: MyString

@@ -1,31 +1,72 @@
+
+
+
 .toppage {
-    height: 800px;
+    height: auto;
     width: 100%;
     background-size: 100%;
 }
 
-.slide-container {
-    width: 100%;
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-  .slide-wrapper {
-    display: flex;
-    height: 300px;
-    animation: slide-flow 20s infinite linear 1s both;
-  }
-  .slide{
-    width: 300px;
-    object-fit:cover;
-    border: 1px solid #ddd;
-  }
-  @keyframes slide-flow {
-      0% {transform: translateX(0);}
-  100% {transform: translateX(-100%);}
-  }
 
-  .coffee-container{
-    height:300px;
-  }
+.title{
+  font-family: "Allura", cursive;
+  font-size: 140px;
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+  width: 100%;
+
+}
+
+.topword{
+  font-size: 50px;
+  color: #f2f2f2;
+  position: absolute;
+  top: 30vh;
+  text-align: center;
+  width: 100%;
+
+}
+
+
+
+.cup{
+  width: 100%;
+}
+
+.slide-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 340px;
+  overflow: hidden;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+.slide-wrapper {
+  display: flex;
+  flex-direction: row;
+  animation: slide-flow 20s infinite linear 1s both;
+}
+.slide{
+  width: 300px;
+  object-fit: cover;
+}
+@keyframes slide-flow {
+     0% {transform: translateY(0);}
+ 100% {transform: translateX(-100%);}
+}
+
+.coffee-container{
+  height:300px;
+  color:#71736A;
+  margin: 20px;
+  background-color: #f2f2f2;
+
+  border:1px solid #71736A;	/* 線の太さ・種類・色 */
+  padding: 45px;	/* 内側の余白 */
+  position: relative;
+}
+
+

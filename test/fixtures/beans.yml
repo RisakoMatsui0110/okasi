@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: MyString
   area: MyString
   url: MyText
   taste: MyString
@@ -8,6 +9,7 @@ one:
   grind: MyString
 
 two:
+  name: MyString
   area: MyString
   url: MyText
   taste: MyString

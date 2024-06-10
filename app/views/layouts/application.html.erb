@@ -6,23 +6,33 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="css/7-1-15.css">
-  </head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=LXGW+WenKai+TC&family=Noto+Serif+JP:wght@200..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">  </head>
 
   <body>
     <header>
       <div class="navtext-container">
-        <div class="navtext"><%= link_to "Coffee Journey", beans_toppage_path %></div>
+        <div class="navtext">
+          <%= link_to "Coffee Journey", beans_toppage_path %>
+        </div>
+
           <input type="checkbox" class="menu-btn" id="menu-btn">
-          <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+
+          <label for="menu-btn" class="menu-icon">
+            <span class="navicon">
+            </span>
+          </label>
+
           <ul class="menu">
             <li><%= link_to "商品紹介", beans_path %></li>
             <li><%= link_to "おすすめコーヒー診断",perfumes_question1_path %></li>
+
             <% if user_signed_in? %>
               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
               <li><%= link_to "マイページ", user_path(current_user.id) %><li>
@@ -31,6 +41,7 @@
               <li><%= link_to "ログイン", new_user_session_path %></li>
             <% end %>
           </ul>
+      </div>
     </header>
 
     <main>
